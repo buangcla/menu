@@ -20,6 +20,10 @@
             cursor: pointer;
             margin-bottom: 10px;
         }
+        .menu-description {
+            font-size: 0.9em;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -29,11 +33,14 @@
         <div class="card menu-card" onclick="toggleMenu('menu1')">
             <div class="card-header">Cafe Hojas</div>
             <div id="menu1" class="card-body" style="display: none;">
+                <h5>Soups / Salad</h5>
+                <hr>
                 <ul>
-                    <li>Espresso</li>
-                    <li>Latte</li>
-                    <li>Cappuccino</li>
-                    <li>Croissant</li>
+                    <li><strong>Soup of the Day - P350</strong><br><span class="menu-description">Daily Soup with Chef's Garnish</span></li>
+                    <li><strong>Chicken Tinola - Solo P185 | Family P700</strong><br><span class="menu-description">Chicken pieces cooked in ginger flavored broth with Chayote, Malunggay and Lemongrass</span></li>
+                    <li><strong>Mixed Green Salad - P425</strong><br><span class="menu-description">Mixed greens, carrots, french beans, olives, artichokes and tomatoes, banana vinaigrette dressing</span></li>
+                    <li><strong>Mango and Grilled Prawn Salad - P475</strong><br><span class="menu-description">Romaine, mangoes, toasted cashews, grilled prawns drizzled with Nuoc Nam sauce</span></li>
+                    <li><strong>Eggplant Two Ways - P265</strong><br><span class="menu-description">Breaded eggplant on a bed of spicy marinara sauce topped with traditional ensaladang along</span></li>
                 </ul>
             </div>
         </div>
