@@ -18,48 +18,54 @@
         }
         .menu-card {
             cursor: pointer;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd; /* Keep borders uniform */
+            border-radius: 10px;
+            overflow: hidden;
         }
         .menu-card .card-header {
             font-size: 1.8em;
             font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+        .menu-body {
+            padding: 15px;
+            display: none;
         }
         .menu-description {
             font-size: 0.9em;
             font-style: italic;
         }
-
         .best-seller {
-    font-size: 0.8em;
-    color: #d9534f; /* Red color */
-    font-weight: bold;
-    margin-left: 10px;
-    animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.restaurant-image {
-    width: 100%;  /* Makes image fully responsive */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 15px; /* Spacing below the image */
-}
-
-
+            font-size: 0.8em;
+            color: #d9534f; /* Red color */
+            font-weight: bold;
+            margin-left: 10px;
+            animation: blink 1.5s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .restaurant-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="text-center mb-4">Select Your Food Menu</h1>
 
+        <!-- Cafe Hojas -->
         <div class="card menu-card" onclick="toggleMenu('menu1')">
             <div class="card-header">Cafe Hojas</div>
-            <div id="menu1" class="card-body" style="display: none;">
+            <div id="menu1" class="menu-body">
                 <img src="https://i.imgur.com/VGV8ybS.jpeg" alt="Cafe Hojas" class="restaurant-image">
                 <h5>Soups / Salad</h5>
                 <hr>
@@ -167,37 +173,60 @@
         <span class="menu-description">Variety of fruits in season</span>
     </li>
 </ul>
-<div class="text-center mt-4">
-    <a href="https://m.me/tambuliseasideresortandspa?ref=Restaurants" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
-            </div>
-        </div>
-
-        <div class="card menu-card" onclick="toggleMenu('menu2')">
-            <div class="card-header">Bar Montan</div>
-            <div id="menu2" class="card-body" style="display: none;">
-                <h5>Appetizers</h5>
-                <hr>
-                <ul>
-                    <li><strong>Buffalo Wings - P550</strong><br><span class="menu-description">Crispy wings tossed in spicy buffalo sauce, served with ranch dip</span></li>
-                    <li><strong>Nachos Supreme - P695</strong><br><span class="menu-description">Tortilla chips topped with cheese, jalapeños, beef, and sour cream</span></li>
-                </ul>
-                
-                <h5>Grill Specials</h5>
-                <hr>
-                <ul>
-                    <li><strong>Grilled Pork Chop - P850</strong><br><span class="menu-description">Juicy grilled pork chop served with mashed potatoes and vegetables</span></li>
-                    <li><strong>Angus Beef Steak - P1,450</strong><br><span class="menu-description">Premium Angus beef steak grilled to perfection, served with garlic rice</span></li>
-                </ul>
-
                 <div class="text-center mt-4">
                     <a href="https://m.me/tambuliseasideresortandspa?ref=Restaurants" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
                 </div>
             </div>
         </div>
-      
-        
+
+        <!-- Bar Montan -->
+        <div class="card menu-card" onclick="toggleMenu('menu2')">
+            <div class="card-header">Bar Montan</div>
+            <div id="menu2" class="menu-body">
+                <h5>Appetizers</h5>
+                <hr>
+                <ul>
+                    <li><strong>Buffalo Wings - P550</strong><br><span class="menu-description">Crispy wings tossed in buffalo sauce</span></li>
+                    <li><strong>Nachos Supreme - P695</strong><br><span class="menu-description">Tortilla chips with cheese, jalapeños, beef, and sour cream</span></li>
+                </ul>
+                <div class="text-center mt-4">
+                    <a href="https://m.me/tambuliseasideresortandspa?ref=Restaurants" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
+                </div>
+            </div>
+        </div>
 
 
+
+        <!-- Caverna -->
+        <div class="card menu-card" onclick="toggleMenu('menu3')">
+            <div class="card-header">Caverna</div>
+            <div id="menu3" class="menu-body">
+                <h5>Steaks & Grills</h5>
+                <hr>
+                <ul>
+                    <li><strong>Ribeye Steak - P1,200</strong><br><span class="menu-description">Grilled to perfection with garlic butter</span></li>
+                    <li><strong>BBQ Pork Ribs - P850</strong><br><span class="menu-description">Slow-cooked ribs with house BBQ sauce</span></li>
+                </ul>
+                <div class="text-center mt-4">
+                    <a href="YOUR_CHATBOT_LINK_HERE" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipsy Dog -->
+        <div class="card menu-card" onclick="toggleMenu('menu4')">
+            <div class="card-header">Tipsy Dog</div>
+            <div id="menu4" class="menu-body">
+                <h5>Drinks & Cocktails</h5>
+                <hr>
+                <ul>
+                    <li><strong>Margarita - P350</strong><br><span class="menu-description">Classic tequila cocktail with lime</span></li>
+                    <li><strong>Craft Beer Sampler - P500</strong><br><span class="menu-description">Selection of house craft beers</span></li>
+                </ul>
+                <div class="text-center mt-4">
+                    <a href="YOUR_CHATBOT_LINK_HERE" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
+                </div>
+            </div>
     </div>
 </body>
 </html>
