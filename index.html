@@ -40,6 +40,9 @@
     
     
     <style>
+
+        <th> class="menu-category" style="visibility: hidden;">Sparkling Wines / Champagne</th>  
+        
         body {
             background-color: #f8f9fa;
             padding: 20px;
@@ -48,7 +51,7 @@
             cursor: pointer;
             margin-bottom: 15px;
             border: 2px solid #ddd; /* Keep borders uniform */
-            border-radius: 10px;
+            border-radius: 20px;
             overflow: hidden;
         }
         .menu-card .card-header {
@@ -87,11 +90,282 @@
         #restaurantCarousel {
     margin-bottom: 30px; /* Adjust the space as needed */
         }
+    
+        
+        
+        .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between text and "New!" */
+}
 
+.callout-box {
+    display: inline-block;
+    background: linear-gradient(45deg, #ADFF2F, #007BFF);
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-left: 8px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    animation: bounce 1.5s infinite ease-in-out;
+    transform: rotate(-10deg);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(-10deg);
+    }
+}
+
+.menu-table {
+    width: 100%;
+    table-layout: fixed; /* Prevents automatic resizing */
+    border-collapse: collapse;
+}
+
+.menu-table td.drink-name {
+    width: 70%; /* Adjust width as needed */
+    word-wrap: break-word;
+}
+
+.menu-table td.price {
+    width: 30%;
+    text-align: right; /* Aligns price to the right */
+    white-space: nowrap; /* Prevents line break */
+}
+
+.menu-table th.price-label {
+    text-align: right; /* Ensures header aligns with price */
+}
+
+
+
+.menu-category {
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 40%; /* Reduce width to bring columns closer */
+}
+
+.price-label {
+  font-style: italic;
+  text-align: left;
+  width: 30%; /* Reduce width */
+}
+
+.drink-name {
+  text-align: left;
+  width: 40%; /* Reduce width */
+}
+
+.price {
+  text-align: left;
+  width: 30%; /* Reduce width */
+}
+
+.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.menu-table td, .menu-table th {
+    padding: 5px;
+    vertical-align: top;
+}
+
+.menu-table td.price {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.menu-description {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+.special-menu-table td.price {
+    padding-left: 57px; /* Adjust the value to move it more */
+}
+
+.special-menu-table2 td.price {
+    padding-left: -10px; /* Adjust the value to move it more */
+}
+
+
+
+
+/* Apply styles only to Tipsy Dog section */
+.tipsy-dog-section {
+    background: url('https://i.imgur.com/frhbhrk.jpeg') no-repeat;
+    background-size: 1900px auto; /* Manually set width and height */
+    background-position: center -50px; /* Centers horizontally, moves up 50px */
+    padding: 20px;
+    border-radius: 10px;
+    color: #104d36; /* Ensures readability */
+    position: relative; /* No need to remove */
+   }
+
+/* Option to move all text (adjust as needed) */
+.tipsy-dog-content {
+    padding: 20px;
+    text-align: left;
+    min-height: 250px; /* Reserves space permanently */
+    position: relative; /* Ensures it stays in place */
+}
+
+
+/* Title styling */
+.tipsy-dog-section h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #104d36; /* Gold for a bar feel */
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.8); /* Neon glow effect */
+    text-align: center;
+}
+
+/* Table styling (no background box) */
+.tipsy-dog-section .menu-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Dish name styling */
+.tipsy-dog-section .dish-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #104d36;
+}
+
+/* Price styling */
+.tipsy-dog-section .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #104d36; /* Bright orange-red */
+    text-align: right;
+}
+
+/* Description styling */
+.tipsy-dog-section .menu-description {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #104d36; /* Slightly lighter text for contrast */
+}
+
+/* Row hover effect */
+.tipsy-dog-section .menu-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tipsy-dog-section .menu-table {
+        font-size: 0.9rem;
+    }
+}
+
+.spacer {
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+ /* Apply only to Bar Montan section */
+ .bar-montan {
+            background-color: #e3f2fd; /* Light blue background */
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #074f75; /* Deep Ocean Blue */
+        }
+
+        .bar-montan h2 {
+            font-size: 2.5em;
+            font-family: 'Lobster', cursive;
+            color: #0077b6; /* Vibrant Pool Blue */
+            text-shadow: 2px 2px 8px rgba(0, 119, 182, 0.3);
+            letter-spacing: 1px;
+        }
+
+        .bar-montan .menu-container {
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 119, 182, 0.2);
+            border: 3px solid #00b4d8;
+        }
+
+        .bar-montan .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: rgba(0, 180, 216, 0.1);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .bar-montan .menu-item:hover {
+            background: rgba(0, 180, 216, 0.3);
+        }
+
+        .bar-montan .menu-text {
+            flex: 1;
+        }
+
+        .bar-montan .menu-text strong {
+            display: block;
+            font-size: 1.1em;
+            color: #023e8a; /* Deep Blue */
+        }
+
+        .bar-montan .menu-text span {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #666;
+        }
+
+        .bar-montan .price {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2em;
+            color: #0096c7; /* Bright Cyan */
+            min-width: 80px;
+            text-align: right;
+        }
+
+        /* Wavy Divider */
+        .bar-montan .divider {
+            width: 100%;
+            height: 10px;
+            background: url('https://i.imgur.com/H2UlgLL.png'); /* Custom wavy divider */
+            background-size: cover;
+            margin: 20px 0;
+        }
+
+        
     </style>
 </head>
 <body>
-    <div class="container">
+
+        <div class="container">
 
         <h1 class="text-center mb-4">Select Your Food Menu</h1>
 
@@ -202,9 +476,14 @@
         <span class="menu-description">Variety of fruits in season</span>
     </li>
 </ul>
+
+
                 <div class="text-center mt-4">
                     <a href="https://m.me/tambuliseasideresortandspa?ref=Restaurants" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
                 </div>
+                <br>
+                <p style="text-align: center; color: #555; font-size: 16px; margin-bottom: 15px;">
+                    Prices are inclusive of VAT and subject to local tax and 10% service charge         
             </div>
         </div>
 
@@ -212,16 +491,380 @@
         <div class="card menu-card" onclick="toggleMenu('menu2')">
             <div class="card-header">Bar Montan</div>
             <div id="menu2" class="menu-body">
-                <h5>Appetizers</h5>
+                <img src="https://i.imgur.com/CH9BkZv.jpeg" alt="Bar Montan" class="restaurant-image">
+
+                
+                <h5>Appetizers / Salads</h5>
                 <hr>
                 <ul>
-                    <li><strong>Buffalo Wings - P550</strong><br><span class="menu-description">Crispy wings tossed in buffalo sauce</span></li>
-                    <li><strong>Nachos Supreme - P695</strong><br><span class="menu-description">Tortilla chips with cheese, jalapeños, beef, and sour cream</span></li>
+                    <li><strong>Soft Beef Tacos - P350</strong><span class="callout-box">New!</span><br><span class="menu-description">House-made tortilla, tomato & corn salsa, spicy garlic sauce</span></li>
+                    <li><strong>Beef Nachos - P350</strong><span class="callout-box">New!</span><br><span class="menu-description">With smoky chili beef, tomato salsa, lime, cheese sauce</span></li>
+                    <li><strong>Pork Sisig - P525</strong><span class="callout-box">New!</span><br><span class="menu-description">Marinated and grilled pork cheeks, chicken liver, chili and egg</span></li>
+                    <li><strong>Calamari - P595</strong><br><span class="menu-description">Deep-fried crispy cuttle fish and french fries with garlic aioli</span></li>
+                    <li><strong>Chicken Satay - P375</strong><br><span class="menu-description">Grilled chicken in skewers served with pickled papaya and peanut sauce</span></li>
+                    <li><strong>Mango and Grilled Prawns Salad - P475</strong><br><span class="menu-description">Mixed greens tossed with sweet and tangy mangoes with grilled large prawns drizzled with nước nấm dressing</span></li>
+                    <li><strong>Fish and Chips - P765</strong><br><span class="menu-description">Beer battered fish fillets served french fries and tartar sauce</span></li>
                 </ul>
-                <div class="text-center mt-4">
+
+                <h5>Sandwich</h5>
+                <hr>
+                <ul>
+                    <li><strong>Tambuli Signature Burger - P895</strong><br><span class="menu-description">Char grilled new zealand ground beef topped with fresh veggies, jerkins, swiss cheese</span></li>
+                    <li><strong>Tuna Melt Sandwich -  P675</strong><br><span class="menu-description">Tuna, cheddar, mozarella, caramelized onion in buttered sourbread</span></li>
+                    <li><strong>Pulled Pork Sandwich - 675</strong><br><span class="menu-description">Slow-cooked shredded pork with barbecue sauce, mustard pickled papaya</span></li>
+                    <li><strong>Korean Fried Chicken  Burger - P850</strong><br><span class="menu-description">Marinated chicken patties between kimchi and gochujang mayo served with potato fries</span></li>
+                </ul>
+
+                <h5>Pasta / Pizza</h5>
+                <hr>
+                <ul>
+                    <li><strong>Creamy Carbonara Pasta - P500</strong><br><span class="menu-description">Spaghetti pasta, fresh button mushrooms flavored with house bacon</span></li>
+                    <li><strong>Bolognese Pasta - P500</strong><br><span class="menu-description">Spaghetti pasta, beef and tomatoes, basil, parmesan cheese</span></li>
+                    <li><strong>Hawaiian Pizza - P770</strong><br><span class="menu-description">Onion, ham, pineapple, mushrooms</span></li>
+                    <li><strong>Pepperoni Pizza - P770</strong><br><span class="menu-description">Mushrooms, chili, marinated capsicum</span></li>
+                    <li><strong>All Meat Pizza - P770</strong><br><span class="menu-description">Ham, pepperoni, bacon, Italian sausage</span></li>
+                    <li><strong>Seafood Pizza - P770</strong><br><span class="menu-description">Shrimps, squids, scallops, gremolata</span></li>
+                    <li><strong>Salami and Blue Cheese Pizza - P770</strong><br><span class="menu-description">Caramelized onions, gorgonzola cheese, parsley</span></li>
+                    <li><strong>Four Cheese Pizza - P770</strong><br><span class="menu-description">Asiago, gorgonzola, tallegio, mozzarella</span></li>
+                    <li><strong>Calzone - P770</strong><br><span class="menu-description">Pepperoni, Italian sausage, basil</span></li>
+                </ul>
+
+                <h5>Sides</h5>
+                <hr>
+                <ul>
+                    <li><strong>Onion Rings - P485</strong><br><span class="menu-description">Beer battered onions served with thousand island dressing</span></li>
+                    <li><strong>House-Made Potato Fries - P150</strong><br><span class="menu-description">Served with garlic aioli and tomato ketchup</span></li>
+                </ul>
+
+                <h5>Desserts</h5>
+                <hr>
+                <ul>
+                    <li><strong>Fruit Platter - P350</strong><br><span class="menu-description">Assorted tropical fruits in season</span></li>
+                    <li><strong>Turon Platter -  P495</strong><br><span class="menu-description">Deep-fried banana with ube and langka coated with brown sugar topped with vanilla ice cream, drizzled with salted caramel sauce</span></li>
+                    <li><strong>Ice Cream - P200</strong><br><span class="menu-description">Choice of 3 Scoops available: • Chocolate, Ube, Strawberry, Mango, Vanilla</span></li>
+                </ul>
+
+
+                <h5>Mocktail</h5>
+                <hr>
+                <ul>
+                    <li><strong>Tropicalisma - P220</strong><br><span class="menu-description">Assorted tropical fruits in season</span></li>
+                    <li><strong>Palm Spritzer - P220</strong><br><span class="menu-description">Pineapple, Kiwi, Ginger Ale</span></li>
+                    <li><strong>Pears Be With You - P220</strong><br><span class="menu-description">Pears, Basil, Mint, Soda</span></li>
+                    <li><strong>Seaside - P220</strong><br><span class="menu-description">Pandan, Coconut, Pineapple Juice</span></li>
+                </ul>
+
+
+                <h5>Cocktail</h5>
+                <hr>
+                <ul>
+                    <li><strong>Rosa Nova - P320</strong><br><span class="menu-description">Gin, Salted Petals, Rosemary</span></li>
+                    <li><strong>Garden Daiquiri - P320</strong><br><span class="menu-description">Rhum, Pandan, Lemon</span></li>
+                    <li><strong>Corazon Del Jarden - P320</strong><br><span class="menu-description">Gin, Basil, Cucumber</span></li>
+                    <li><strong>Spicy Sips - P320</strong><br><span class="menu-description">Tequila, Spicy Syrup, Lemon</span></li>
+                    <li><strong>Tambuli Sour - P320</strong><br><span class="menu-description">Whiskey, Lemon, Egg White, Rosemary</span></li>
+                </ul>
+
+
+                <h5>Classic Cocktail</h5>
+                <hr>
+                <ul>
+                    <li><strong>Mojito - P300</strong><br></li>
+                    <li><strong>Piña Colada - P300</strong><br></li>
+                    <li><strong>Margarita - P300</strong><br></li>
+                    <li><strong>Daiquiri - P300</strong><br></li>
+                    <li><strong>Cosmopolitan - P300</strong><br></li>
+                    <li><strong>Bees Knees - P350</strong><br></li>
+                    <li><strong>Amarreto Sour - P350</strong><br></li>
+                </ul>
+
+                <h5>Beers</h5>
+                <hr>
+                <ul>
+                    <li><strong>Red Horse - P170</strong><br></li>
+                    <li><strong>Pale Pilsen - P170</strong><br></li>
+                    <li><strong>San Mig Light - P170</strong><br></li>
+                    <li><strong>San Mig Apple - P170</strong><br></li>
+                    <li><strong>Heineken - P170</strong><br></li>
+                    <li><strong>Corona - P350</strong><br></li>
+                </ul>
+
+
+                <h5>Spirits</h5>
+                <hr>
+                
+                <table class="menu-table">
+                    <tr>
+                      <th class="menu-category">Gin</th>
+                      <th class="price-label">Shots / Bottle</th>
+                    </tr>
+                    <tr>
+                      <td class="drink-name"><strong>Bombay Sapphire</strong></td>
+                      <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                      <td class="drink-name"><strong>Hendricks</strong></td>
+                      <td class="price">P450 / P9,000</td>
+                    </tr>
+                    <tr>
+                      <td class="drink-name"><strong>Tanqueray</strong></td>
+                      <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                      <td class="drink-name"><strong>Botanist</strong></td>
+                      <td class="price">P450 / P9,000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <th class="menu-category">Rhum</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+                      <tr>
+                        <td class="drink-name"><strong>Don Papa</strong></td>
+                        <td class="price">P340 / P9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Diplomatico Reserva</strong></td>
+                        <td class="price">P400 / P9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Captain Morgan</strong></td>
+                        <td class="price">P180 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Bacardi Superior</strong></td>
+                        <td class="price">P180 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Bacardi Gold</strong></td>
+                        <td class="price">P180 / P3,600</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+                    <tr>
+                        <th class="menu-category">Whiskey</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Maker’s Mark</strong></td>
+                        <td class="price">P250 / P4,500</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Jack Daniels</strong></td>
+                        <td class="price">P210 / P4,200</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Jameson</strong></td>
+                        <td class="price">P210 / P4,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Wild Turkey</strong></td>
+                        <td class="price">P400 / P9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Jim Beam</strong></td>
+                        <td class="price">P210 / P2,500</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Canadian Club</strong></td>
+                        <td class="price">P210 / P2,800</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Chivas Regal</strong></td>
+                        <td class="price">P210 / P4,200</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Johnnie Walker Black Label</strong></td>
+                        <td class="price">P210 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Johnnie Walker Double Black</strong></td>
+                        <td class="price">P340 / P5,500</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Johnnie Walker Blue</strong></td>
+                        <td class="price">P900 / P18,000</td>
+                    </tr>
+                    
+
+
+
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th class="menu-category">Vodka</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Grey Goose</strong></td>
+                        <td class="price">P340 / P5,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Absolut Blue</strong></td>
+                        <td class="price">P400 / P3,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Absolut Citron</strong></td>
+                        <td class="price">P180 / P3,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Kanto Vodka</strong></td>
+                        <td class="price">P180 / P3,600</td>
+                    </tr>
+                    
+
+                    
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th class="menu-category">Liqueur</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+
+                      <tr>
+                        <td class="drink-name"><strong>Ube Cream Liqueur</strong></td>
+                        <td class="price">P350 / P4,500</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Disaronno</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Kahlua</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Jagermeister</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Drambuie</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Vaccari Sambuca</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Baileys</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th class="menu-category">Brandy / Cognac</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+
+                        <tr>
+                        <td class="drink-name"><strong>Hennessy XO</strong></td>
+                        <td class="price">P960 / P19,200</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Hennessy VSOP</strong></td>
+                        <td class="price">P570 / P11,200</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Remy Martin VSOP</strong></td>
+                        <td class="price">P960 / P19,200</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Remy Martin XO</strong></td>
+                        <td class="price">P570 / P9,000</td>
+                    </tr>
+  
+
+
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th class="menu-category">Tequila</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+                      <tr>
+                        <td class="drink-name"><strong>Jose Cuervo Gold</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Patron Reposado</strong></td>
+                        <td class="price">P450 / P9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Tequila 8OP</strong></td>
+                        <td class="price">P450 / P9,000</td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th class="menu-category">Aperitif</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+
+                      <tr>
+                        <td class="drink-name"><strong>Campari</strong></td>
+                        <td class="price">P250 / P3,600</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Grand Marnier</strong></td>
+                        <td class="price">P250 / P5,000</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th class="menu-category">Single Malt</th>
+                        <th class="price-label">Shots / Bottle</th>
+                      </tr>
+                      <tr>
+                        <td class="drink-name"><strong>Glenfiddich</strong></td>
+                        <td class="price">P450 / P9,000</td>
+                    </tr>
+                    <tr>
+                        <td class="drink-name"><strong>Glenlivet</strong></td>
+                        <td class="price">P450 / P9,000</td>
+                    </tr>
+
+                  </table>
+                  </table>
+                  
+                  
+                    <div class="text-center mt-4">
                     <a href="https://m.me/tambuliseasideresortandspa?ref=Restaurants" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
+                    </div>
+                    <br>
+                    <p style="text-align: center; color: #555; font-size: 16px; margin-bottom: 15px;">
+                        Prices are inclusive of VAT and subject to local tax and 10% service charge      
                 </div>
-            </div>
         </div>
 
 
@@ -230,12 +873,880 @@
         <div class="card menu-card" onclick="toggleMenu('menu3')">
             <div class="card-header">Caverna</div>
             <div id="menu3" class="menu-body">
-                <h5>Steaks & Grills</h5>
+            <img src="https://i.imgur.com/7FTx0nl.jpeg" alt="Bar Montan" class="restaurant-image">    
+
+
+                <h5>Soup</h5>
                 <hr>
-                <ul>
-                    <li><strong>Ribeye Steak - P1,200</strong><br><span class="menu-description">Grilled to perfection with garlic butter</span></li>
-                    <li><strong>BBQ Pork Ribs - P850</strong><br><span class="menu-description">Slow-cooked ribs with house BBQ sauce</span></li>
-                </ul>
+                <table class="menu-table">
+                    <tr>
+                        <td class="dish-name"><strong>Soup of the Day</strong><br>
+                            <span class="menu-description">Fresh Made Daily Changing Soup</span>
+                        </td>
+                        <td class="price">P500</td>
+                    </tr>
+                </table>
+                
+
+                
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+
+
+                <h5>Salad</h5>
+                <hr>
+                <table class="menu-table">
+                        <tr>
+                        <td class="dish-name"><strong>Caverna Signature Caesar Salad</strong><br>
+                            <span class="menu-description">Marinated Grilled Chicken, Boiled Eggs, Fresh Anchovy Dressing</span>
+                        </td>
+                        <td class="price">P600</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Bufala Salad</strong><br>
+                            <span class="menu-description">Bufala Cheese, Tomato, Fresh Basil, Arugula, Balsamic Reduction</span>
+                        </td>
+                        <td class="price">P530</td>
+                    </tr>
+                </table>
+
+
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+
+
+                <h5>Appetizer</h5>
+                <hr>
+                <table class="menu-table">
+                   <tr>
+                        <td class="dish-name"><strong>Tomato Bruschetta</strong><br>
+                            <span class="menu-description">Oil Marinated Tomatoes, Artichoke Hearts, Grana Padano, Fresh Pesto</span>
+                        </td>
+                        <td class="price">P550</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Steamed Mussels</strong><br>
+                            <span class="menu-description">Flamed in White Wine, Fine Herbs, Garlic, Tomatoes, Fresh Cream</span>
+                        </td>
+                        <td class="price">P950</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Baked Prawns</strong><br>
+                            <span class="menu-description">Nut Crusted Prawns, Tomatoes, Fresh Coriander, Lemon Butter Sauce</span>
+                        </td>
+                        <td class="price">P950</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Ham and Cheese Croquettes</strong><br>
+                            <span class="menu-description">Spicy Marinara, Grilled Marinated Peppers, Mayo Paprika Sauce</span>
+                        </td>
+                        <td class="price">P850</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Eggplant Parmesan</strong><br>
+                            <span class="menu-description">Crusted Eggplant, Marinara Sauce, Mozzarella Cheese, Grana Padano, Fresh Basil</span>
+                        </td>
+                        <td class="price">P700</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Grilled Asparagus</strong><br>
+                            <span class="menu-description">Truffle Cream, Dehydrated Eggplant, Poached Egg, Tarragon Pesto</span>
+                        </td>
+                        <td class="price">P450</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Eggplant Lasagna</strong><br>
+                            <span class="menu-description">Grilled Eggplant, Marinara Sauce, Ricotta Cheese, Tarragon Pesto</span>
+                        </td>
+                        <td class="price">P515</td>
+                    </tr>
+                </table>
+
+
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+
+
+                <h5>House Made Pasta</h5>
+                <hr>
+                <table class="menu-table">
+                    <tr>
+                        <td class="dish-name"><strong>Prawn Aglio Olio</strong><br><span class="menu-description">Garlic, Olive Oil, Chili, Grana Padano</span></td>
+                        <td class="price">P1,065</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Chicken Parmesan</strong><br><span class="menu-description">Parmesan Crusted Chicken, Fresh Tomatoes, Fresh Herbs, Marinara Sauce</span></td>
+                        <td class="price">P955</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Pappardelle</strong><br><span class="menu-description">Braised Veal, Wild Mushrooms, Fresh Herbs</span></td>
+                        <td class="price">P1,065</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Truffle Prawn Carbonara</strong><br><span class="menu-description">Prosciutto Crudo, Fresh Mushrooms, Flat Parsley</span></td>
+                        <td class="price">P1,235</td>
+                    </tr>
+                </table>
+
+           
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+
+
+                <h5>Woodfired Pizza</h5>
+                <hr>
+                <table class="menu-table">
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Margherita</strong><br><span class="menu-description">Fresh Tomatoes, Bufala Cheese, Basil</span></td>
+                        <td class="price">P730</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Capricciosa</strong><br><span class="menu-description">Pitted Olives, Artichoke Hearts, Fresh Harvest Mushrooms, Classic Prosciutto</span></td>
+                        <td class="price">P1,065</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Mushroom</strong><br><span class="menu-description">Old Style Bechamel Sauce, Fresh Harvest Mushrooms, Taleggio Cheese</span></td>
+                        <td class="price">P1,010</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Anchovy</strong><br><span class="menu-description">Fresh Tomatoes, Pitted Olives, Marinated Capers</span></td>
+                        <td class="price">P955</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Chicken Taco Pizza</strong><br><span class="menu-description">Salsa Roja, Grilled Chicken, Coriander, Jalapeño</span></td>
+                        <td class="price">P830</td>
+                    </tr>
+                </table>
+                
+               
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+
+
+                <h5>Main Course</h5>
+                <hr>
+                <table class="menu-table">
+                    <tr>
+                        <td class="dish-name"><strong>Seafood Risotto</strong><br><span class="menu-description">Assorted fine seafood, asparagus, fresh tomato, Grana Padano</span></td>
+                        <td class="price">P1,455</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Braised Short Ribs</strong><br><span class="menu-description">Creamy polenta, fresh mushrooms, gremolata, red wine au jus</span></td>
+                        <td class="price">P1,680</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Pan Roasted Salmon</strong><br><span class="menu-description">Potato gnocchi, charred peppers, fresh tomatoes, lemon butter sauce</span></td>
+                        <td class="price">P1,120</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Braised Lamb Shank</strong><br><span class="menu-description">Mashed sweet potato, glazed sweet apple, French beans, au jus</span></td>
+                        <td class="price">P1,680</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Pork Belly</strong><br><span class="menu-description">Slow-roasted pork belly, crispy skin, apple chutney</span></td>
+                        <td class="price">P1,235</td>
+                    </tr>
+                    <tr>
+                        <td class="dish-name"><strong>Fritto Misto Di Mare</strong><br><span class="menu-description">Fried assorted seafood served with lemon wedge and dipping sauce</span></td>
+                        <td class="price">P1,400</td>
+                    </tr>
+                </table>
+                
+
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+
+                        <h5>Roast in Wood Oven</h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <td class="dish-name"><strong>US Angus Rib-eye</strong><br><span class="menu-description">Roasted potatoes, fresh arugula, mustard</span></td>
+                                <td class="price">P4,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Whole Chicken</strong><br><span class="menu-description">Roasted potatoes, grilled lemon, fresh arugula</span></td>
+                                <td class="price">P1,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Whole Seabass</strong><br><span class="menu-description">Oven roasted whole seabass with seafood puttanesca sauce</span></td>
+                                <td class="price">P1,500</td>
+                            </tr>
+                        </table>
+
+
+
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+
+
+                            <h5>Sides</h5>
+                            <hr>
+                            <table class="menu-table">
+                                <tr>
+                                    <td class="dish-name"><strong>Sicilian Broccoli</strong><br>
+                                        <span class="menu-description">Broccoli florets, fresh lemon, garlic</span>
+                                    </td>
+                                    <td class="price">P500</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Cumin Fries and Aioli Dip</strong><br>
+                                        <span class="menu-description">Skin on fries, cumin, aioli dip</span>
+                                    </td>
+                                    <td class="price">P220</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Garlic Mashed Potato</strong><br>
+                                        <span class="menu-description">Potato, parsley, garlic confit</span>
+                                    </td>
+                                    <td class="price">P300</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Mac and Cheese</strong><br>
+                                        <span class="menu-description">Garlic confit, fresh cream, fresh parsley, mozzarella cheese, grana padano</span>
+                                    </td>
+                                    <td class="price">P475</td>
+                                </tr>
+                            </table>
+                            
+
+
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+
+
+                            <h5>Vegan</h5>
+                            <hr>
+                            <table class="menu-table">
+                                    <tr>
+                                    <td class="dish-name"><strong>Hummus with Pita Bread</strong><br>
+                                        <span class="menu-description">Purée chickpeas with tahini, lemon juice, olive oil, served with marinated tomatoes and pita</span>
+                                    </td>
+                                    <td class="price">P450</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Baba Ghanoush with Pita Bread</strong><br>
+                                        <span class="menu-description">Grilled eggplant with tahini, lemon juice, olive oil, served with marinated tomatoes and pita</span>
+                                    </td>
+                                    <td class="price">P630</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Glazed Beets Salad</strong><br>
+                                        <span class="menu-description">Glazed beetroot, marinated chickpeas, almond flakes and arugula tossed with citrus dressing</span>
+                                    </td>
+                                    <td class="price">P630</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Vegetable Skewers</strong><br>
+                                        <span class="menu-description">Grilled mixed vegetables, pumpkin purée, confit garlic, garnished with fresh arugula</span>
+                                    </td>
+                                    <td class="price">P400</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Quinoa Salad</strong><br>
+                                        <span class="menu-description">Gluten free grain tossed with cucumber, onions, mint, coriander, pumpkin purée, topped with roasted pumpkin</span>
+                                    </td>
+                                    <td class="price">P680</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Beetroot Cutlet</strong><br>
+                                        <span class="menu-description">Beetroot patties, pumpkin purée, tarragon pesto</span>
+                                    </td>
+                                    <td class="price">P355</td>
+                                </tr>
+                            </table>
+
+
+
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+
+
+
+                            <h5>Dessert</h5>
+                            <hr>
+                            <table class="menu-table">
+                                    <tr>
+                                    <td class="dish-name"><strong>Tiramisu</strong><br>
+                                    <span class="menu-description">Lady Fingers, Coffee Liqueur, Mascarpone Cheese, Egg custard</span>
+                                    </td>
+                                    <td class="price">P385</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Chocolate Fondant</strong><br>
+                                    <span class="menu-description">Vanilla Ice Cream, Candied Nuts</span>
+                                    </td>
+                                    <td class="price">P615</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Lemon Tart</strong><br>
+                                        <span class="menu-description">A pastry shell with a tangy, delicious smooth lemon curd topped with meringue and chocolate ganache</span>
+                                    </td>
+                                    <td class="price">P350</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Fruit Platter</strong><br>
+                                        <span class="menu-description">Assorted fruits in season</span>
+                                    </td>
+                                    <td class="price">P400</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Gelato</strong><br>
+                                        <span class="menu-description">Flavors to choose from: Yoghurt and Strawberry, Chocolate, Italian Biscuit, Salted Caramel</span>
+                                    </td>
+                                    <td class="price"></td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Gelato (1 Scoop)</strong></td>
+                                    <td class="price">P170</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Gelato (2 Scoops)</strong></td>
+                                    <td class="price">P305</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong>Gelato (3 Scoops)</strong></td>
+                                    <td class="price">P390</td>
+                                </tr>
+                            </table>
+                            
+
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+
+                            <h5>Shakes / Juices / Smoothies</h5>
+                            <hr>
+                                <table class="menu-table">
+                                    <tr>
+                                        <td class="drink-name"><strong>Mango</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P250</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Pineapple</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P250</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Watermelon</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P250</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Four Season</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P250</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Green Mango</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P250</td>
+                                    </tr>
+                                 
+    
+                                </table>  
+
+                            
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+    
+                                
+                                
+                            <h5>Sodas</h5>
+                            <hr>
+                                <table class="menu-table">
+                                    <tr>
+                                        <td class="drink-name"><strong>Coke</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P150</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Coke Zero</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P150</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Sprite</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P150</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Royal</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P150</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Soda Water</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P150</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Tonic Water</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P150</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Red Bull</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P200</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="drink-name"><strong>Ginger Ale</strong> </td>
+                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P170</td>
+                                    </tr>
+                                 
+    
+                                </table>  
+
+                                    <tr>
+                                        <td colspan="2">&nbsp;</td>
+                                    </tr>
+        
+                                    
+                                    <h5>Kid's Drink</h5>
+                                    <hr>
+                                        <table class="menu-table">
+                                            <tr>
+                                                <td class="drink-name"><strong>Vanilla Shake</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P250</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Chocolate Shake</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P250</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Coke Float</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P220</td>
+                                            </tr>
+                                      
+            
+                                        </table>  
+
+
+                          
+                                <tr>
+                                    <td colspan="2">&nbsp;</td>
+                                </tr>
+    
+                                
+                                <h5>Coffee</h5>
+                                <hr>
+                                    <table class="menu-table">
+                                        <tr>
+                                            <td class="drink-name"><strong>Espresso</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P110</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="drink-name"><strong>Double Espresso</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P160</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="drink-name"><strong>Americano</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P195</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="drink-name"><strong>Cappuccino</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P210</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="drink-name"><strong>Caffè Mocha</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P225</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="drink-name"><strong>Hot Choco</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P170</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="drink-name"><strong>Macchiato</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P120</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="drink-name"><strong>Latte</strong> </td>
+                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P210</td>
+                                        </tr>
+                                     
+        
+                                    </table>  
+
+
+                                    <tr>
+                                        <td colspan="2">&nbsp;</td>
+                                    </tr>
+        
+                                    
+                                    <h5>Tea</h5>
+                                    <hr>
+                                        <table class="menu-table">
+                                            <tr>
+                                                <td class="drink-name"><strong>Peppermint</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P160</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>English Breakfast</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P160</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Jasmine Green Tea</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P160</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Earl Grey Tea </strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P160</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Pure Chamomile Flower</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P160</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Iced Lemon and Calamansi Tea</strong> </td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P180</td>
+                                            </tr>
+                                                   
+                                        </table>  
+
+ <tr>
+                                        <td colspan="2">&nbsp;</td>
+                                    </tr>
+
+                                        <h5>Sparkling Wines / Champagne</h5>
+                                        <hr>
+                                            <table class="menu-table">
+                                                <tr>
+                                                    <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                                    <th class="price-label">Glass / Bottle</th>
+                                                </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Growers Gate</strong> <em>South Australia</em></td>
+                                                <td class="price">P495 / P1,600</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Fat Bastard Blanc de blanc</strong> <em>France</em></td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P2,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="drink-name"><strong>Azimut Brut Rose</strong> <em>Spain</em></td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P2,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="drink-name"><strong>Valdivieso Moscato Demi Sec</strong> <em>Chile</em></td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P2,200</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="drink-name"><strong>Moët Chandon</strong> <em>France</em></td>
+                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P9,000</td>
+                                              </tr>
+                                            </table>
+                                          
+                        
+                        
+                                            <tr>
+                                                <td colspan="2">&nbsp;</td>
+                                            </tr>
+                        
+
+                                            <h5>White Wines</h5>
+                                            <hr>
+                                                <table class="menu-table">
+                                                    <tr>
+                                                        <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                                        <th class="price-label">Glass / Bottle</th>
+                                                    </tr>
+                                                <tr>
+                                                    <td class="drink-name"><strong>Soul & Wine Sauvignon Blanc</strong> <em>South Australia</em></td>
+                                                    <td class="price">P495 / P1,600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="drink-name"><strong>Fat Bastard Blanc de blanc</strong> <em>France</em></td>
+                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P2,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="drink-name"><strong>Azimut Brut Rose</strong> <em>Spain</em></td>
+                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P2,000</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="drink-name"><strong>Valdivieso Moscato Demi Sec</strong> <em>Chile</em></td>
+                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P2,200</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="drink-name"><strong>Moët Chandon</strong> <em>France</em></td>
+                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P9,000</td>
+                                                  </tr>
+                                                </table>
+                                              
+                            
+                            
+                                                <tr>
+                                                    <td colspan="2">&nbsp;</td>
+                                                </tr>
+                        
+                                            <h5>White Wines</h5>
+                                            <hr>
+                                                <table class="menu-table">
+                                                        <tr>
+                                                        <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                                        <th class="price-label">Glass / Bottle</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="drink-name"><strong>Soul & Wine Sauvignon Blanc</strong> <em>Chile</em></td>
+                                                        <td class="price">P495 / P1,600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="drink-name"><strong>Whistling Duck Moscato</strong> <em>Australia</em></td>
+                                                        <td class="price">P495 / P1,600</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="drink-name"><strong>Camas Sauvignon Blanc</strong> <em>France</em></td>
+                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P1,800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="drink-name"><strong>Tempus Pinot Gris</strong> <em>South Eastern Australia</em></td>
+                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P1,800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="drink-name"><strong>Camas Chenin Blanc</strong> <em>France</em></td>
+                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P2,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="drink-name"><strong>Finca Ferrer Accordion Torrontes</strong> <em>Argentina</em></td>
+                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P2,200</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="drink-name"><strong>Submission Chardonnay</strong> <em>California</em></td>
+                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P3,500</td>
+                                                    </tr>
+                                                </table>
+                        
+                        
+                                                <tr>
+                                                    <td colspan="2">&nbsp;</td>
+                                                </tr>
+                            
+                            
+                                                <h5>Red Wines</h5>
+                                                <hr>
+                                                    <table class="menu-table">
+                                                            <tr>
+                                                            <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                                            <th class="price-label">Glass / Bottle</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Soul & Wine Merlot</strong> <em>Chile</em></td>
+                                                            <td class="price">P495 / P1,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Whistling Duck Shiraz</strong> <em>Australia</em></td>
+                                                            <td class="price">P495 / P1,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Lamadoro Primitivo</strong> <em>France</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P1,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Camas Merlot</strong> <em>South Eastern Australia</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P1,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Fat Bastard Pinot Noir</strong> <em>France</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P2,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Chez Samantha Rouge</strong> <em>Argentina</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P2,200</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Al-Muvedre</strong> <em>California</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P2,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Brouilly Domaine des Terreso</strong> <em>France</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P2,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Submission Cabernet Sauvignon</strong> <em>Argentina</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P3,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Albahra</strong> <em>California</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P3,800</td>
+                                                        </tr>
+                        
+                                                    </table>
+                        
+                                                    <tr>
+                                                        <td colspan="2">&nbsp;</td>
+                                                    </tr>
+                        
+                        
+                                                    <h5>ROSÉ</h5>
+                                                <hr>
+                                                    <table class="menu-table">
+                                                        <tr>
+                                                            <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                                            <th class="price-label">Glass / Bottle</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Genesis</strong> <em>Chile</em></td>
+                                                            <td class="price">P500 / P2,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Fat Bastard</strong> <em>France</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P2,200</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Tramari Rose di Primitivo</strong> <em>Italy</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P2,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="drink-name"><strong>Domaine de la Rouviere</strong> <em>France</em></td>
+                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P3,000</td>
+                                                        </tr>
+                                                     
+                        
+                                                    </table>
+                        
+                        
+                                                    <tr>
+                                                        <td colspan="2">&nbsp;</td>
+                                                    </tr>
+
+
+                                                    <h5>Beer</h5>
+                                                    <hr>
+                                                        <table class="menu-table">
+                                                            <tr>
+                                                                <td class="drink-name"><strong>Red Horse</strong> </td>
+                                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P170</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="drink-name"><strong>Pale Pilsen</strong> </td>
+                                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P170</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="drink-name"><strong>San Miguel Light</strong> </td>
+                                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P170</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="drink-name"><strong>San Mig Apple</strong> </td>
+                                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P170</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="drink-name"><strong>Heineken</strong> </td>
+                                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P170</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="drink-name"><strong>Corona</strong> </td>
+                                                                <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                            </tr>
+                                                                   
+                                                        </table>  
+
+
+
+                                                        <tr>
+                                                            <td colspan="2">&nbsp;</td>
+                                                        </tr>
+    
+    
+                                                        <h5>Mocktail</h5>
+                                                        <hr>
+                                                            <table class="menu-table">
+                                                                <tr>
+                                                                    <td class="drink-name"><strong>Know it Ales</strong> </td>
+                                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P220</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="drink-name"><strong>Honey Basil</strong> </td>
+                                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P220</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="drink-name"><strong>Just About Thyme</strong> </td>
+                                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P220</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="drink-name"><strong>Mint to Be</strong> </td>
+                                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P220</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="drink-name"><strong>Pineapple Cucumber</strong> </td>
+                                                                    <td class="price"><span style="visibility: hidden;">P495 /</span> P220</td>
+                                                                </tr>
+                                                                                                                                    
+                                                            </table>  
+
+
+                                                            <tr>
+                                                                <td colspan="2">&nbsp;</td>
+                                                            </tr>
+        
+        
+                                                            <h5>Classic Cocktail</h5>
+                                                            <hr>
+                                                                <table class="menu-table">
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Negroni</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Old Fashioned</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Martini</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Manhattan</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Tom Collins</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Cucumber Mojito</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Whiskey Sour</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="drink-name"><strong>Sea Breeze</strong> </td>
+                                                                        <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                    </tr>
+                                                                         
+                                                                                                                                        
+                                                                </table>  
+
+
+
+                                                                <tr>
+                                                                    <td colspan="2">&nbsp;</td>
+                                                                </tr>
+            
+            
+                                                                <h5>Signature Cocktail</h5>
+                                                                <hr>
+                                                                    <table class="menu-table">
+                                                                        <tr>
+                                                                            <td class="drink-name"><strong>Negroni Sbagliato</strong> </td>
+                                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="drink-name"><strong>Aperol Spritz</strong> </td>
+                                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P450</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="drink-name"><strong>Pandan Spritzer</strong> </td>
+                                                                            <td class="price"><span style="visibility: hidden;">P495 /</span> P350</td>
+                                                                        </tr>
+                                                                                                                                                                                                                                                                             
+                                                                    </table>  
+
+
+
+
                 <div class="text-center mt-4">
                     <a href="YOUR_CHATBOT_LINK_HERE" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
                 </div>
@@ -246,12 +1757,1214 @@
         <div class="card menu-card" onclick="toggleMenu('menu4')">
             <div class="card-header">Tipsy Dog</div>
             <div id="menu4" class="menu-body">
-                <h5>Drinks & Cocktails</h5>
-                <hr>
-                <ul>
-                    <li><strong>Margarita - P350</strong><br><span class="menu-description">Classic tequila cocktail with lime</span></li>
-                    <li><strong>Craft Beer Sampler - P500</strong><br><span class="menu-description">Selection of house craft beers</span></li>
-                </ul>
+
+                
+                <div class="tipsy-dog-section">
+                    <div style="height: 400px;"></div>
+                    <div class="tipsy-dog-content">
+
+                        <h5> Small </h5>
+                        <hr>
+                        <table class="menu-table">
+                                <tr>
+                                    <td class="dish-name"><strong> Soup of the Day</strong></td>
+                                    <td class="price">P200</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Spinach Dip</strong><br>
+                                        <span class="menu-description">Fresh Baked Three Cheese Spinach, Served with Homemade Crackers</span>
+                                    </td>
+                                    <td class="price">P380</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Chorizo and Gambas</strong><br>
+                                        <span class="menu-description">Shrimp, Olive Oil, Paprika</span>
+                                    </td>
+                                    <td class="price">P680</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Beef Skewer</strong><br>
+                                        <span class="menu-description">With Pita Bread</span>
+                                    </td>
+                                    <td class="price">P880</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Chicken Croquettes</strong><br>
+                                        <span class="menu-description">Spicy Marinara, Pickled Onion, Bonito Flakes</span>
+                                    </td>
+                                    <td class="price">P250</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Crispy Pork Belly</strong><br>
+                                        <span class="menu-description">With Garlic Aioli & Chili Vinegar</span>
+                                    </td>
+                                    <td class="price">P350</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Deep Fried Calamari</strong><br>
+                                        <span class="menu-description">With Tartar Sauce & Chili Vinegar</span>
+                                    </td>
+                                    <td class="price">P280</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Grilled Octopus</strong><br>
+                                        <span class="menu-description">Marble Potato, Lemon Vinaigrette</span>
+                                    </td>
+                                    <td class="price">P380</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Falafel</strong><br>
+                                        <span class="menu-description">With Pita Bread & Tahini Garlic Sauce</span>
+                                    </td>
+                                    <td class="price">P350</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Beef Taco</strong><br>
+                                        <span class="menu-description">With Garlic Sauce and Salsa</span>
+                                    </td>
+                                    <td class="price">P450</td>
+                                </tr>
+                                <tr>
+                                    <td class="dish-name"><strong> Chicken Quesadilla</strong><br>
+                                        <span class="menu-description">Tomato & Corn Salsa, Mozzarella</span>
+                                    </td>
+                                    <td class="price">P280</td>
+                                </tr>
+                                
+                        </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Med</h5>
+                        <hr>
+                        <table class="menu-table">
+                                <tr>
+                                <td class="dish-name"><strong> Baby Mix Green Salad</strong><br>
+                                    <span class="menu-description">Mangoes, Candied Nuts, Feta Cheese</span>
+                                </td>
+                                <td class="price">P480</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong> The Local</strong><br>
+                                    <span class="menu-description">Mesclun Leaf, Caramelized Banana, Native Cheese, Mango Dressing</span>
+                                </td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong> Tipsy Burger</strong><br>
+                                    <span class="menu-description">Side of Fries, Pickled Beets, Bacon, Fried Egg, Cheddar Cheese</span>
+                                </td>
+                                <td class="price">P890</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong> Chicken Parmesan Sandwich</strong><br>
+                                    <span class="menu-description">Side of Fries, Crusted Chicken Breast, Beets, Homemade Marinara Sauce</span>
+                                </td>
+                                <td class="price">P650</td>
+                            </tr>
+                        </table>
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Big </h5>
+                        <hr>
+                        <table class="menu-table">
+                                <tr>
+                                <td class="dish-name"><strong>SEAFOOD BOARD</strong><br>
+                                    <span class="menu-description">Buttered Mix Seafood & Vegetable, Chimichurri Mayo</span>
+                                </td>
+                                <td class="price">P2,200</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>SEAFOOD PAELLA</strong><br>
+                                    <span class="menu-description">Squid, Scallops, Mussels, Shrimp, Saffron Broth</span>
+                                </td>
+                                <td class="price">P1,990</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>VEGETARIAN PAELLA</strong><br>
+                                    <span class="menu-description">Mushroom Chicharron, Dehydrated Beetroot, Tomato, Eggplant</span>
+                                </td>
+                                <td class="price">P1,280</td>
+                            </tr>
+                        </table>
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> AFTER - AFTER </h5>
+                        <hr>
+                        <table class="menu-table">
+                                <tr>
+                                <td class="dish-name"><strong>BEEF NACHOS</strong><br>
+                                    <span class="menu-description">Smoky Chili Beef, Tomato & Corn Salsa, Cheese Sauce</span>
+                                </td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>PARMESAN FRIES</strong><br>
+                                    <span class="menu-description">Side of Spicy Mayo & Tomato Ketchup</span>
+                                </td>
+                                <td class="price">P250</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>FLAMING ALASKA</strong><br>
+                                    <span class="menu-description">Vanilla Ice Cream in a Liquor Flamed Meringue</span>
+                                </td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>TIPSY TABLEA PIZZA</strong><br>
+                                    <span class="menu-description">With Liquor Flamed, Mango, Choco de Bola</span>
+                                </td>
+                                <td class="price">P280</td>
+                            </tr>
+                        </table>
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Gin </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Beefeater London Dry</strong></td>
+                                <td class="price">P220</td>
+                                <td class="price">P3,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Tanqueray</strong></td>
+                                <td class="price">P320</td>
+                                <td class="price">P4,900</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Bombay Sapphire</strong></td>
+                                <td class="price">P300</td>
+                                <td class="price">P4,750</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Whitley Neill Blackberry</strong></td>
+                                <td class="price">P380</td>
+                                <td class="price">P9,000</td>
+                            </tr>
+                        </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Gin Premium </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Hendricks</strong></td>
+                                <td class="price">P450</td>
+                                <td class="price">P12,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Tanqueray 10</strong></td>
+                                <td class="price">P450</td>
+                                <td class="price">P12,500</td>
+                            </tr>
+                            </table>
+                        
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Rum </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Captain Morgan</strong></td>
+                                <td class="price">P220</td>
+                                <td class="price">P3,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Bacardi Superior</strong></td>
+                                <td class="price">P220</td>
+                                <td class="price">P3,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Bacardi Gold</strong></td>
+                                <td class="price">P220</td>
+                                <td class="price">P3,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Don Papa</strong></td>
+                                <td class="price">P380</td>
+                                <td class="price">P9,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Havana Club 7yrs</strong></td>
+                                <td class="price">P380</td>
+                                <td class="price">P5,800</td>
+                            </tr>
+                        </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Vodka </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Smirfnoff</strong></td>
+                                <td class="price">P220</td>
+                                <td class="price">P3,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Absolut Blue</strong></td>
+                                <td class="price">P220</td>
+                                <td class="price">P3,200</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Grey Goose</strong></td>
+                                <td class="price">P380</td>
+                                <td class="price">P9,800</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Stolichnaya</strong></td>
+                                <td class="price">P380</td>
+                                <td class="price">P4,900</td>
+                            </tr>
+                            
+                        </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+
+                        <h5> Liqueur </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Baileys</strong></td>
+                                <td class="price">P250</td>
+                                <td class="price">P3,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Jaggermeister</strong></td>
+                                <td class="price">P250</td>
+                                <td class="price">P3,200</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Kahlúa</strong></td>
+                                <td class="price">P250</td>
+                                <td class="price">P3,600</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Disaronno</strong></td>
+                                <td class="price">P320</td>
+                                <td class="price">P4,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Malibu</strong></td>
+                                <td class="price">P240</td>
+                                <td class="price">P5,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Ube Cream Liqueur</strong></td>
+                                <td class="price">P420</td>
+                                <td class="price">P6,000</td>
+                            </tr>
+                        </table>
+                        
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+
+                        <h5> Tequila </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Jose Cuervo Gold</strong></td>
+                                <td class="price">P240</td>
+                                <td class="price">P4,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>1800 Reposado</strong></td>
+                                <td class="price">P550</td>
+                                <td class="price">P11,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Patron Silver</strong></td>
+                                <td class="price">P650</td>
+                                <td class="price">P15,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Patron Reposado</strong></td>
+                                <td class="price">P700</td>
+                                <td class="price">P15,000<</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Aperitif </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Campari</strong></td>
+                                <td class="price">P250</td>
+                                <td class="price">P3,900</td>
+                            </tr>
+                            </table>
+
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+
+                        <h5> Whiskey </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Canadian Club</strong></td>
+                                <td class="price">P210</td>
+                                <td class="price">P3,600</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Jim Beam</strong></td>
+                                <td class="price">P210</td>
+                                <td class="price">P3,200</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Jameson</strong></td>
+                                <td class="price">P280</td>
+                                <td class="price">P4,200</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Maker’s Mark</strong></td>
+                                <td class="price">P280</td>
+                                <td class="price">P4,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Chivas Regal</strong></td>
+                                <td class="price">P250</td>
+                                <td class="price">P5,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Jack Daniel’s</strong></td>
+                                <td class="price">P300</td>
+                                <td class="price">P4,800</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>JW Black Label</strong></td>
+                                <td class="price">P250</td>
+                                <td class="price">P5,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>JW Double Black</strong></td>
+                                <td class="price">P350</td>
+                                <td class="price">P7,500</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Single Malt </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Glenfiddich</strong></td>
+                                <td class="price">P450</td>
+                                <td class="price">P12,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Glenlivet</strong></td>
+                                <td class="price">P450</td>
+                                <td class="price">P12,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Macallan 15 yrs</strong></td>
+                                <td class="price">P2,200</td>
+                                <td class="price">P35,200</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Brandy Cognac </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🥃 Shot</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Remy Martin VSOP</strong></td>
+                                <td class="price">P590</td>
+                                <td class="price">P9,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Hennessy VSOP</strong></td>
+                                <td class="price">P650</td>
+                                <td class="price">P15,200</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Hennessy XO</strong></td>
+                                <td class="price">P950</td>
+                                <td class="price">P19,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Remy Martin XO</strong></td>
+                                <td class="price">P950</td>
+                                <td class="price">P19,500</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Carlos 1</strong></td>
+                                <td class="price">P380</td>
+                                <td class="price">P9,000</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Sparkling Wine </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🍸 Glass</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Growers Gate Brut Cuvée</strong> <em>(Australia)</em></td>
+                                <td class="price">P250</td>
+                                <td class="price">P1,600</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Azimut Brut Cava Rose</strong> <em>(Spain)</em></td>
+                                <td class="price"></td>
+                                <td class="price">P2,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Moet Chandon</strong> <em>(France)</em></td>
+                                <td class="price"></td>
+                                <td class="price">P9,000</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> White Wine </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🍸 Glass</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Whistling Duck Moscato</strong> <em>(Australia)</em></td>
+                                <td class="price">P495</td>
+                                <td class="price">P1,600</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Camas Sauvignon Blanc</strong> <em>(France)</em></td>
+                                <td class="price"></td>
+                                <td class="price">P1,800</td>
+                            </tr>
+                            </table>
+                        
+                            <h5> Red Wine </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🍸 Glass</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Whistling Duck Shiraz</strong> <em>(Australia)</em></td>
+                                <td class="price">P495</td>
+                                <td class="price">P1,600</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Camas Merlot</strong> <em>(France)</em></td>
+                                <td class="price">P495</td>
+                                <td class="price">P1,600</td>
+                            </tr>
+                            </table>
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Rosé Wine </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label">🍸 Glass</th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Genesis</strong> <em>(Central Valley Chile)</em></td>
+                                <td class="price">P500</td>
+                                <td class="price">P2,000</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fat Bastard</strong> <em>(France)</em></td>
+                                <td class="price"></td>
+                                <td class="price">P2,200</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Tramari Rose di Primitivo</strong> <em>(Italy)</em></td>
+                                <td class="price"></td>
+                                <td class="price">P2,800</td>
+                            </tr>
+                            </table>
+
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Beer </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Red Horse</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P180</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Pale Pilsen</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P180</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>San Miguel Flavored Beer (Apple)</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P180</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>San Miguel Light</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P185</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Beer-Draught </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Bisaya Brew Belgian</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Wheat</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Bisaya Brew IPA</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Sapporo Draft Beer</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Beer-Imported </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label">🍾 Bottle</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Heineken</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Corona</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Stella Artois</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Classic Cocktail </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label">🍸 Glass</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Classic Margarita</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Mojito</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Mojito</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Whiskey Sour</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Manhattan</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Long Island Iced Tea</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Old Fashioned</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Amaretto Sour</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Martini</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P320</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Aperol Spritz</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P400</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Espres o Martini</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P450</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Signature Cocktail </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label">🍸 Glass</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Pawz Spritz</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Kumpassion</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Beefeater Bark</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Havana Howl</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Taragon Spritz</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Sunbrunt</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Tipsy Highball</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Pamela</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P420</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Mocktail </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label">🍸 Glass</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Ginger ale lemonad</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Summer Mocktail</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Mango Ginger Fizz</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Herbal Breeze</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fruit Cooler</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Minty Mango Peach</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Tropical Splash</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Peach me</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+                        
+                        <h5> Fresh Shake and Juices </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label">🍸 Glass</th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fresh Mango Juice</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P240</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fresh Pine Apple Juice</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P240</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fresh Watermelon juice</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P240</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fresh Calamansi Juice</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P240</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fresh Lemonade Juice</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P260</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fresh Four Season Juice</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P270</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Fresh Orange Juice</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P350</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Mango Shake</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P250</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Pineapple Shake</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P250</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Watermelon Shake</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P250</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Four Season Shake</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P280</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Tea </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label"></th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>English Breakfast</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P165</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Jasmine Green Tea</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P165</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Earl Grey</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P165</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Pure Chamomile</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P165</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Lemon Ice Tea</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P210</td>
+                            </tr>
+                            
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Smoothies and Frappe </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label"></th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Vanilla Smoothie</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Mango Smoothie</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Chocolate Shake</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Tablea Chocolate Smoothie</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P350</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Choco Banana Smoothie</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P350</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Mocha Frappe</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P350</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Salted Caramel Frappe</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P350</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Hazelnut Frappe</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P350</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Coffee </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label"></th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Espreso Macchiato</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P145</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Double Espresso</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P170</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Americano</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P185</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Brewed Coffee</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P195</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Latte Macchiato</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P210</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Café Latte</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P210</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Cappucino</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P210</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Café Mocha</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P235</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Caramel Macchiato</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P265</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+                        <h5> Soda & Water </h5>
+                        <hr>
+                        <table class="menu-table">
+                            <tr>
+                                <th class="menu-category"><span style="visibility: hidden;">Category</span></th>
+                                <th class="price-label"></th>
+                                <th class="price-label"></th>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>101 Bottle Water</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P90</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Coke Reg.</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P170</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Coke Zero</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P170</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Soda Water</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P180</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Tonic Water</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P180</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Perrier 330ml</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P300</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Royal</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P170</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Sprite</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P170</td>
+                            </tr>
+                            <tr>
+                                <td class="dish-name"><strong>Red Bull</strong></td>
+                                <td class="price"></td>
+                                <td class="price">P220</td>
+                            </tr>
+                            </table>
+                        
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                        </tr>
+
+
+
+
+
+
+                    </div>
+                </div>
+                    
+
+
+
+
+
+
+
+
                 <div class="text-center mt-4">
                     <a href="YOUR_CHATBOT_LINK_HERE" class="btn btn-primary btn-lg" target="_blank">Book a Table</a>
                 </div>
